@@ -1,0 +1,149 @@
+.footer {
+  background-color: #0F172A; /* Slate 900 SaaS Base */
+  padding: 80px 0 0 0;
+  color: #F8FAFC;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.footerDescription {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.columnHeading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #2596be; /* Brand Blue Accent */
+  margin-bottom: 24px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link {
+  color: #94A3B8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.link:hover {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: #1E293B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94A3B8;
+  border: 1px solid #334155;
+  transition: 0.2s ease;
+}
+
+.socialIcon:hover {
+  background: #2596be;
+  color: #FFFFFF;
+  border-color: #2596be;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.bottomBar {
+  border-top: 1px solid #1E293B;
+  padding: 30px 0;
+}
+
+.bottomBarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #64748B;
+  font-size: 0.85rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 30px;
+}
+
+.legalLinks a {
+  color: #64748B;
+  text-decoration: none;
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 24px 60px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .bottomBarContent {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
