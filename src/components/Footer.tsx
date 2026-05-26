@@ -2,20 +2,19 @@
 
 import React from "react";
 import Link from "next/link";
+import Logo from "@/components/Logo";
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0F172A] pt-20 text-[#F8FAFC] border-t border-white/5">
+    <footer className="bg-[#020B1C] pt-20 text-[#F8FAFC] border-t border-white/5">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-10 pb-[60px] max-w-[1200px] mx-auto px-6">
         {/* Brand Column */}
         <div className="flex flex-col">
-          <Link href="/" className="flex items-center gap-3 text-[1.4rem] font-bold text-white mb-5">
-            <svg width="28" height="28" viewBox="0 0 45 40" fill="none">
-              <path d="M5 5H18L26.5 22L35 5H40L29 27L22.5 40L5 5Z" fill="#1161ed" />
-            </svg>
-            <span>V2 Labs</span>
+          <Link href="/" className="flex items-center gap-3 mb-5 group">
+            <Logo showTagline={true} dark={true} />
           </Link>
           <p className="text-[#94A3B8] text-[0.95rem] leading-relaxed mb-6">
             Engineering high-performance digital products. From custom web systems to scalable e-commerce infrastructure.
@@ -66,7 +65,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[#1E293B] py-[30px]">
+      <div className="border-t border-white/5 py-[30px]">
         <div className="flex flex-col sm:flex-row justify-between items-center text-[#64748B] text-[0.85rem] max-w-[1200px] mx-auto px-6 gap-5 sm:gap-0 text-center sm:text-left">
           <p>© {currentYear} V2 Labs. All rights reserved.</p>
           <div className="flex gap-[30px]">
