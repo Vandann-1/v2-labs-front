@@ -129,6 +129,8 @@ const serviceGroupDescriptions: Record<string, string> = {
   "Infrastructure and Integrations":
     "Connected platforms, mobile experiences, APIs, and cloud-ready engineering foundations.",
 };
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/$/, "") || "http://localhost:8000";
 
 function CustomSelect({
   label,
@@ -360,16 +362,20 @@ export default function ContactPage() {
     setStatus({ type: null, message: "" });
 
     try {
-      const response = await fetch("http://localhost:8000/api/contact/", {
+      const response = await fetch(`${API_BASE_URL}/api/contact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          source_page:
+            typeof window !== "undefined" ? window.location.href : "/contact",
+        }),
       });
 
       const data = await response.json();
-
+ 
       if (response.ok && data.success) {
         setStatus({
           type: "success",

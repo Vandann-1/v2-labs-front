@@ -1,36 +1,35 @@
-# V2 Labs - Next.js Frontend Web App
+# V2 Labs Frontend
 
-This is the front-facing digital portal for the **V2 Labs** agency. It has been built using **Next.js (App Router)** and **TypeScript** to achieve high performance, responsive navigation, and visually stunning interactive elements.
+Next.js App Router frontend for the V2 Labs website.
 
-## Features
+## Local setup
 
-- **Premium Vanilla CSS Design System**: Fully configured using HSL variables in `globals.css` to render standard dark navy backgrounds (`#0F172A`), electric blue glows (`#2563EB`), cyan highlight accents (`#06B6D4`), and pristine typography (Google Fonts Outfit & Inter).
-- **Responsive Navigation & Layout**: Tailored layouts with fluid grids that scale flawlessly between mobile smartphones, tablets, and wide screens.
-- **Client-Side Form Estimator**: Integrated estimation forms that handle input validation, load states, error feedback, and success banners when saving leads to Django.
-- **Next.js Standalone Build**: Configured inside `next.config.ts` for super-efficient Docker Alpine production images.
+1. Create `.env.local` from [`.env.example`](C:/Users/User/Desktop/v2labs/v2labs%20frontend/v2-labs-front/.env.example:1).
+2. Install dependencies:
 
----
+```bash
+npm install
+```
 
-## 🛠️ Getting Started Locally
+3. Start the dev server:
 
-1. Ensure you have **Node.js (v18+)** installed.
-2. In this folder (`v2-frontend`), install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Access the web app at [http://localhost:3000](http://localhost:3000).
+```bash
+npm run dev
+```
 
-## 🐋 Docker Container Commands
+## Deployment on Vercel
 
-- **Build Docker Image**:
-  ```bash
-  docker build -t v2labs-frontend .
-  ```
-- **Run Container**:
-  ```bash
-  docker run -p 3000:3000 v2labs-frontend
-  ```
+- Framework config is in [vercel.json](C:/Users/User/Desktop/v2labs/v2labs%20frontend/v2-labs-front/vercel.json:1)
+- Build target is already configured in [next.config.ts](C:/Users/User/Desktop/v2labs/v2labs%20frontend/v2-labs-front/next.config.ts:1)
+
+### Required environment variables
+
+- `NEXT_PUBLIC_API_BASE_URL`
+
+For production, set:
+
+```env
+NEXT_PUBLIC_API_BASE_URL=https://your-render-service.onrender.com
+```
+
+The contact form sends lead data to the backend and now includes the current page URL as `source_page`.
