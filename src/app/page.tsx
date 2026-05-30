@@ -728,16 +728,6 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Already a member */}
-            <div className="mt-6 lg:mt-8 text-[0.85rem] text-[#64748B] select-none">
-              Already a member?{" "}
-              <Link
-                href="/contact"
-                className="text-[#0F172A] font-bold hover:text-[#1161ed] transition-colors duration-200"
-              >
-                Sign in.
-              </Link>
-            </div>
           </div>
 
           {/* Right Image/Graphics Column - Top on Mobile / Right on Desktop */}

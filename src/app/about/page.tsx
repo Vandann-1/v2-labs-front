@@ -70,6 +70,17 @@ export default function AboutPage() {
       bio: "Social media manager and wordpress designer & developer focused on building secure, scalable, and high-performance web applications. Experienced in REST APIs, database design, authentication systems, and backend architecture.",
       img: "/Rishabh Tiwari.png",
     },
+    {
+      name: "Vansh Shukla",
+      role: "Junior Web Developer",
+      initials: "VS",
+      quote: "Focused on building clean, dependable web experiences.",
+      gradient: "from-[#f59e0b] to-[#f97316]",
+      linkedin: "#",
+      github: "#",
+      bio: "Junior web developer contributing to responsive interfaces and smooth user experiences across modern web projects.",
+      img: "/vansh-je.jpeg",
+    },
 
   ];
 
